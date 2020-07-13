@@ -11,12 +11,14 @@ ENV['BOLT_GEM'] = 'true'
 gemspec
 
 # Bolt server gems are managed here not in the gemspec
-gem "hocon", '>= 1.2.5'
-gem "json-schema", '>= 2.8.0'
-gem "puma", '>= 3.12.0'
-gem "rack", '>= 2.0.5'
-gem "rails-auth", '>= 2.1.4'
-gem "sinatra", '>= 2.0.4'
+group(:server) do
+  gem "hocon", '>= 1.2.5'
+  gem "json-schema", '>= 2.8.0'
+  gem "puma", '>= 3.12.0'
+  gem "rack", '>= 2.0.5'
+  gem "rails-auth", '>= 2.1.4'
+  gem "sinatra", '>= 2.0.4'
+end
 
 # Optional paint gem for rainbow outputter
 gem "paint", "~> 2.2"
